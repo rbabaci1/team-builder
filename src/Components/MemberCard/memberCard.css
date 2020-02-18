@@ -1,0 +1,12 @@
+span {
+    font-weight: bold;
+    font-family: "Monaco";
+}
+
+.member-card {
+    padding: 10px 15px;
+    font-size: 17px;
+    background: #d5d7dc;
+    margin: 5px;
+    border-radius: 5px;
+}
