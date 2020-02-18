@@ -2,6 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./form.css";
 
 export default function Form({ addMember }) {
+  const [newMember, setNewMember] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    gender: "",
+    email: "",
+    phoneNumber: "",
+    role: "",
+    isHappy: ""
+  });
+
   return (
     <div className="member-form">
       <form>
