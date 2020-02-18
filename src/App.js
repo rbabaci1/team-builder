@@ -7,6 +7,16 @@ import Form from "./Components/Form/Form";
 
 function App() {
   const [teamData, setTeamData] = useState(membersData);
+  const [formInput, setFormInput] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    gender: "",
+    email: "",
+    phoneNumber: "",
+    role: "",
+    favLanguage: ""
+  });
 
   return <div className="App"></div>;
 }
