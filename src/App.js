@@ -20,12 +20,12 @@ function App() {
 
   return (
     <div className="App">
+      <Form />
       <div className="card-wrapper">
         {membersData.map((member, index) => (
           <MemberCard member={member} index={index} />
         ))}
       </div>
-      <Form />
     </div>
   );
 }
