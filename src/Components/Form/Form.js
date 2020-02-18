@@ -13,6 +13,13 @@ export default function Form({ addMember }) {
     isHappy: ""
   });
 
+  const inputHandler = event => {
+    setNewMember({
+      ...newMember,
+      [event.target.name]: event.target.value
+    });
+  };
+
   return (
     <div className="member-form">
       <form>
