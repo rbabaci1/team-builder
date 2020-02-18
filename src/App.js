@@ -5,7 +5,7 @@ import MemberCard from "./Components/MemberCard/MemberCard";
 import Form from "./Components/Form/Form";
 
 function App() {
-  const [teamData, setTeamData] = useState([
+  const [membersList, setMembersList] = useState([
     {
       firstName: "Rabah",
       lastName: "Babaci",
@@ -17,22 +17,16 @@ function App() {
       isHappy: "Yes"
     }
   ]);
-  const [formInput, setFormInput] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
-    gender: "",
-    email: "",
-    phoneNumber: "",
-    role: "",
-    favLanguage: ""
-  });
+
+  const addMember = member => {
+    setMembersList([...membersList, member]);
+  };
 
   return (
     <div className="App">
       <Form />
       <div className="card-wrapper">
-        {teamData.map((member, index) => (
+        {membersList.map((member, index) => (
           <MemberCard member={member} index={index} />
         ))}
       </div>
