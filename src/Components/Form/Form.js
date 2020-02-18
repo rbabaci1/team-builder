@@ -6,18 +6,33 @@ export default function Form(props) {
     <div className="member-form">
       <form>
         <section>
-          <label htmlFor="fname">Enter first name: </label>
-          <input type="text" name="firstName" id="fname" />
+          <label htmlFor="fname">First name: </label>
+          <input
+            type="text"
+            name="firstName"
+            id="fname"
+            placeholder="Enter Your First Name"
+          />
         </section>
 
         <section>
-          <label htmlFor="lname">Enter last name: </label>
-          <input type="text" name="lastName" id="lname" />
+          <label htmlFor="lname">Last name: </label>
+          <input
+            type="text"
+            name="lastName"
+            id="lname"
+            placeholder="Enter Your Last Name"
+          />
         </section>
 
         <section>
-          <label htmlFor="age">Enter Age: </label>
-          <input type="number" name="age" id="age" />
+          <label htmlFor="age">Age: </label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Enter Your Age"
+          />
         </section>
 
         <section id="gender-select">
@@ -29,24 +44,33 @@ export default function Form(props) {
         </section>
 
         <section>
-          <label htmlFor="email">Enter email: </label>
-          <input type="email" name="email" id="email" />
-        </section>
-
-        <section>
-          <label htmlFor="phoneNumber">Enter phone number: </label>
+          <label htmlFor="email">Email: </label>
           <input
-            type="tel"
-            name="phoneNumber"
-            id="phoneNumber"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
           />
         </section>
 
         <section>
-          <label htmlFor="role">Enter Role: </label>
-          <input type="text" name="role" id="role" />
+          <label htmlFor="phoneNumber">Phone number: </label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="Enter Your Phone Number"
+          />
+        </section>
+
+        <section>
+          <label htmlFor="role">Role: </label>
+          <input
+            type="text"
+            name="role"
+            id="role"
+            placeholder="Enter Your Role"
+          />
         </section>
 
         <section id="checkbox">
