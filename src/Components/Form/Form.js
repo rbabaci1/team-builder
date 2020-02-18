@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./form.css";
 
-export default function Form(props) {
+export default function Form({ addMember }) {
   return (
     <div className="member-form">
       <form>

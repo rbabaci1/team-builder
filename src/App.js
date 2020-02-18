@@ -28,7 +28,7 @@ function App() {
 
       <div className="card-wrapper">
         {membersList.map((member, index) => (
-          <MemberCard member={member} index={index} />
+          <MemberCard member={member} key={index} />
         ))}
       </div>
     </div>
