@@ -3,39 +3,57 @@ import "./form.css";
 
 export default function Form(props) {
   return (
-    <form>
-      <label htmlFor="fname">Enter first name: </label>
-      <input type="text" name="firstName" id="fname" />
+    <div className="member-form">
+      <form>
+        <section>
+          <label htmlFor="fname">Enter first name: </label>
+          <input type="text" name="firstName" id="fname" />
+        </section>
 
-      <label htmlFor="lname">Enter last name: </label>
-      <input type="text" name="lastName" id="lname" />
+        <section>
+          <label htmlFor="lname">Enter last name: </label>
+          <input type="text" name="lastName" id="lname" />
+        </section>
 
-      <label htmlFor="age">Enter Age: </label>
-      <input type="number" name="age" id="age" />
+        <section>
+          <label htmlFor="age">Enter Age: </label>
+          <input type="number" name="age" id="age" />
+        </section>
 
-      <label htmlFor="gender">Gender: </label>
-      <select id="gender">
-        <option>Male</option>
-        <option>Female</option>
-      </select>
+        <section id="gender-select">
+          <label htmlFor="gender">Gender: </label>
+          <select id="gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </section>
 
-      <label htmlFor="email">Enter email: </label>
-      <input type="email" name="email" id="email" />
+        <section>
+          <label htmlFor="email">Enter email: </label>
+          <input type="email" name="email" id="email" />
+        </section>
 
-      <label htmlFor="phoneNumber">Enter phone number: </label>
-      <input
-        type="tel"
-        name="phoneNumber"
-        id="phoneNumber"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-        required
-      />
+        <section>
+          <label htmlFor="phoneNumber">Enter phone number: </label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+        </section>
 
-      <label htmlFor="role">Enter Role: </label>
-      <input type="text" name="role" id="role" />
+        <section>
+          <label htmlFor="role">Enter Role: </label>
+          <input type="text" name="role" id="role" />
+        </section>
 
-      <label htmlFor="isHappy">Happy with your job?</label>
-      <input type="checkbox" name="isHappy" id="isHappy" />
-    </form>
+        <section id="checkbox">
+          <label htmlFor="isHappy">Happy with your job?</label>
+          <input type="checkbox" name="isHappy" id="isHappy" />
+        </section>
+      </form>
+    </div>
   );
 }
