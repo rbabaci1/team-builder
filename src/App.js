@@ -18,7 +18,13 @@ function App() {
     favLanguage: ""
   });
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      {membersData.map((member, index) => (
+        <MemberCard member={member} index={index} />
+      ))}
+    </div>
+  );
 }
 
 export default App;
