@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import membersData from "./data/membersData";
 import MemberCard from "./Components/MemberCard/MemberCard";
-// import Form from "./Components/Form/Form";
+import Form from "./Components/Form/Form";
 
 function App() {
   const [teamData, setTeamData] = useState(membersData);
@@ -20,9 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      {membersData.map((member, index) => (
-        <MemberCard member={member} index={index} />
-      ))}
+      <div className="card-wrapper">
+        {membersData.map((member, index) => (
+          <MemberCard member={member} index={index} />
+        ))}
+      </div>
+      <Form />
     </div>
   );
 }
