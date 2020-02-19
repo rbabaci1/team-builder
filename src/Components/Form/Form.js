@@ -26,6 +26,10 @@ export default function Form({ addMember, memberToEdit }) {
     });
   };
 
+  useEffect(() => {
+    setNewMember(memberToEdit);
+  }, [memberToEdit]);
+
   const submitForm = event => {
     event.preventDefault();
     addMember(newMember);
