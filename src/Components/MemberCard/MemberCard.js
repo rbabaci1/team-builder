@@ -38,6 +38,8 @@ export default function MemberCard({ member, index }) {
         <span>{member.gender === "Male" ? "He" : "She"}</span>{" "}
         {member.isHappy ? "is" : "is not"} Happy with the job.
       </p>
+
+      <div className="edit-btn">Edit</div>
     </div>
   );
 }
