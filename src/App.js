@@ -18,9 +18,7 @@ function App() {
     }
   ]);
 
-  const addMember = member => {
-    setMembersList([...membersList, member]);
-  };
+  const addMember = member => setMembersList([...membersList, member]);
 
   return (
     <div className="App">

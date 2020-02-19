@@ -35,7 +35,8 @@ export default function MemberCard({ member, index }) {
       </p>
 
       <p>
-        <span>Happy with his/her job?</span> {member.isHappy ? "Yes" : "No"}
+        <span>{member.gender === "Male" ? "He" : "She"}</span>{" "}
+        {member.isHappy ? "is" : "is not"} Happy with the job.
       </p>
     </div>
   );

@@ -52,6 +52,7 @@ export default function Form({ addMember }) {
             name="firstName"
             id="fname"
             placeholder="Enter Your First Name"
+            required
           />
         </section>
 
@@ -64,6 +65,7 @@ export default function Form({ addMember }) {
             name="lastName"
             id="lname"
             placeholder="Enter Your Last Name"
+            required
           />
         </section>
 
@@ -76,6 +78,7 @@ export default function Form({ addMember }) {
             name="age"
             id="age"
             placeholder="Enter Your Age"
+            required
           />
         </section>
 
@@ -86,6 +89,7 @@ export default function Form({ addMember }) {
             value={newMember.gender}
             name="gender"
             id="gender"
+            required
           >
             <option>Male</option>
             <option>Female</option>
@@ -101,6 +105,7 @@ export default function Form({ addMember }) {
             name="email"
             id="email"
             placeholder="Enter Your Email"
+            required
           />
         </section>
 
@@ -113,6 +118,7 @@ export default function Form({ addMember }) {
             name="phoneNumber"
             id="phoneNumber"
             placeholder="Enter Your Phone Number"
+            required
           />
         </section>
 
@@ -125,12 +131,12 @@ export default function Form({ addMember }) {
             name="role"
             id="role"
             placeholder="Enter Your Role"
+            required
           />
         </section>
 
         <section className="checkbox">
           <label htmlFor="isHappy">Happy with your job?</label>
-
           <input
             onChange={inputHandler}
             type="checkbox"

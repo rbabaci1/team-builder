@@ -8,7 +8,7 @@
 form {
     background: #fff;
     width: 90%;
-    max-width: 35rem;
+    max-width: 40rem;
     margin: auto;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -78,10 +78,10 @@ input[type=checkbox] {
 }
 
 #submit-btn {
-    font-size: 22px;
+    font-size: 20px;
     padding: 5px 20px;
     border-radius: 3px;
-    margin: 15px 0;
+    margin: 10px 0;
     background: #07506d;
     color: #fff;
     cursor: pointer;
