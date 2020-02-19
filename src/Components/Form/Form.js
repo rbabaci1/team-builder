@@ -25,9 +25,24 @@ export default function Form({ addMember }) {
     });
   };
 
+  const submitForm = event => {
+    event.preventDefault();
+    addMember(newMember);
+    setNewMember({
+      firstName: "",
+      lastName: "",
+      age: "",
+      gender: "",
+      email: "",
+      phoneNumber: "",
+      role: "",
+      isHappy: ""
+    });
+  };
+
   return (
     <div className="member-form">
-      <form>
+      <form onSubmit={submitForm}>
         <section>
           <label htmlFor="fname">First name: </label>
           <input
