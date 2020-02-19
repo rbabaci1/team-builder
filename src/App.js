@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <Form addMember={addMember} />
+      <Form addMember={addMember} memberToEdit={memberToEdit} />
 
       <div className="card-wrapper">
         {membersList.map((member, index) => (

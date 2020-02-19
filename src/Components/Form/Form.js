@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./form.css";
 
-export default function Form({ addMember }) {
+export default function Form({ addMember, memberToEdit }) {
+  console.log(memberToEdit);
   const [newMember, setNewMember] = useState({
     firstName: "",
     lastName: "",
