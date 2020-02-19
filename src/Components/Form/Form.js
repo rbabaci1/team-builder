@@ -111,6 +111,10 @@ export default function Form({ addMember }) {
             id="isHappy"
           />
         </section>
+
+        <button type="submit" id="submit-btn">
+          Submit
+        </button>
       </form>
     </div>
   );

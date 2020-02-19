@@ -64,3 +64,18 @@ input {
     margin-left: 20px;
     font-size: 20px;
 }
+
+#submit-btn {
+    font-size: 22px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    margin: 15px 0;
+    background: #07506d;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background: rgb(136, 134, 134);
+    color: black
+}
