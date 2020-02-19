@@ -17,6 +17,7 @@ function App() {
       isHappy: true
     }
   ]);
+  const [memberToEdit, setMemberToEdit] = useState([]);
 
   const addMember = member => setMembersList([...membersList, member]);
 
