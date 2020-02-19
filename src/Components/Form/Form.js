@@ -10,7 +10,7 @@ export default function Form({ addMember }) {
     email: "",
     phoneNumber: "",
     role: "",
-    isHappy: ""
+    isHappy: false
   });
 
   const inputHandler = event => {
@@ -36,7 +36,7 @@ export default function Form({ addMember }) {
       email: "",
       phoneNumber: "",
       role: "",
-      isHappy: ""
+      isHappy: false
     });
   };
 
@@ -48,6 +48,7 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="text"
+            value={newMember.firstName}
             name="firstName"
             id="fname"
             placeholder="Enter Your First Name"
@@ -59,6 +60,7 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="text"
+            value={newMember.lastName}
             name="lastName"
             id="lname"
             placeholder="Enter Your Last Name"
@@ -70,6 +72,7 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="number"
+            value={newMember.age}
             name="age"
             id="age"
             placeholder="Enter Your Age"
@@ -78,7 +81,12 @@ export default function Form({ addMember }) {
 
         <section id="gender-select">
           <label htmlFor="gender">Gender: </label>
-          <select onChange={inputHandler} id="gender" name="gender">
+          <select
+            onChange={inputHandler}
+            value={newMember.gender}
+            name="gender"
+            id="gender"
+          >
             <option>Male</option>
             <option>Female</option>
           </select>
@@ -89,6 +97,7 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="email"
+            value={newMember.email}
             name="email"
             id="email"
             placeholder="Enter Your Email"
@@ -100,6 +109,7 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="tel"
+            value={newMember.phoneNumber}
             name="phoneNumber"
             id="phoneNumber"
             placeholder="Enter Your Phone Number"
@@ -111,20 +121,24 @@ export default function Form({ addMember }) {
           <input
             onChange={inputHandler}
             type="text"
+            value={newMember.role}
             name="role"
             id="role"
             placeholder="Enter Your Role"
           />
         </section>
 
-        <section id="checkbox">
+        <section className="checkbox">
           <label htmlFor="isHappy">Happy with your job?</label>
+
           <input
             onChange={inputHandler}
             type="checkbox"
+            checked={newMember.isHappy}
             name="isHappy"
             id="isHappy"
           />
+          <p id="notHappy">{newMember.isHappy ? "Yes" : "No"}</p>
         </section>
 
         <button type="submit" id="submit-btn">
