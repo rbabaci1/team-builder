@@ -17,8 +17,10 @@ export default function Form({
     phoneNumber: "",
     role: "",
     isHappy: false,
-    isEditing: false
+    isEditing: false,
+    id: 0
   });
+  const [memberId, setMemberID] = useState(1);
 
   const inputHandler = event => {
     let value =
@@ -29,7 +31,8 @@ export default function Form({
     setNewMember({
       ...newMember,
       [event.target.name]: value,
-      isEditing: true
+      isEditing: true,
+      id: memberId
     });
   };
 
@@ -40,7 +43,7 @@ export default function Form({
   const submitForm = event => {
     event.preventDefault();
     memberToEdit.isEditing ? editMember(newMember) : addMember(newMember);
-
+    setMemberID(memberId + 1);
     // reset the new member object
     setNewMember({
       firstName: "",

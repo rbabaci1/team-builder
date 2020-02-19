@@ -35,7 +35,6 @@ export default function MemberCard({ member, setMemberToEdit, index }) {
       </p>
 
       <p>
-        {console.log(member.gender)}
         <span>{member.gender === "Female" ? "She" : "He"}</span>{" "}
         {member.isHappy ? "is" : "is not"} Happy with the job.
       </p>
