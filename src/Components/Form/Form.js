@@ -15,9 +15,9 @@ export default function Form({
     email: "",
     phoneNumber: "",
     role: "",
-    isHappy: false
+    isHappy: false,
+    isEditing: false
   });
-  console.log(memberToEdit.isEditing);
 
   const inputHandler = event => {
     let value =
@@ -27,7 +27,8 @@ export default function Form({
 
     setNewMember({
       ...newMember,
-      [event.target.name]: value
+      [event.target.name]: value,
+      isEditing: true
     });
   };
 
@@ -37,11 +38,7 @@ export default function Form({
 
   const submitForm = event => {
     event.preventDefault();
-    if (memberToEdit.length === undefined) {
-      editMember(newMember);
-    } else {
-      addMember(newMember);
-    }
+    memberToEdit.isEditing ? editMember(newMember) : addMember(newMember);
 
     // reset the new member object
     setNewMember({
@@ -67,7 +64,6 @@ export default function Form({
       isHappy: false,
       isEditing: false
     });
-    // setMemberToEdit([]);
   };
 
   return (

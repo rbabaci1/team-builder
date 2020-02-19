@@ -15,7 +15,7 @@ function App() {
       phoneNumber: "510-646-7743",
       role: "Full-Stack Web Developer",
       isHappy: true,
-      isEditing: false
+      isEditing: true
     }
   ]);
   const [memberToEdit, setMemberToEdit] = useState({
@@ -29,8 +29,6 @@ function App() {
     isHappy: false,
     isEditing: false
   });
-  // console.log(membersList);
-  // const [memberToEdit, setMemberToEdit] = useState([]);
 
   const addMember = member => setMembersList([...membersList, member]);
 
@@ -43,7 +41,6 @@ function App() {
       membersList[memberToEditIndex] = editedMember;
     }
   };
-  console.log(memberToEdit);
 
   return (
     <div className="App">

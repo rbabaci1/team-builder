@@ -16,7 +16,7 @@ export default function MemberCard({ member, setMemberToEdit, index }) {
 
       <p>
         <span>Gender: </span>
-        {member.gender}
+        {member.gender === "Female" ? "Female" : "Male"}
       </p>
 
       <p>
@@ -35,7 +35,8 @@ export default function MemberCard({ member, setMemberToEdit, index }) {
       </p>
 
       <p>
-        <span>{member.gender === "Male" ? "He" : "She"}</span>{" "}
+        {console.log(member.gender)}
+        <span>{member.gender === "Female" ? "She" : "He"}</span>{" "}
         {member.isHappy ? "is" : "is not"} Happy with the job.
       </p>
 
