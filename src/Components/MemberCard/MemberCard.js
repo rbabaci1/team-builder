@@ -39,7 +39,9 @@ export default function MemberCard({ member, setMemberToEdit, index }) {
         {member.isHappy ? "is" : "is not"} Happy with the job.
       </p>
 
-      <div className="edit-btn">Edit</div>
+      <div onClick={() => setMemberToEdit(member)} className="edit-btn">
+        Edit
+      </div>
     </div>
   );
 }
