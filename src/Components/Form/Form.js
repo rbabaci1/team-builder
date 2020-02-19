@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./form.css";
 
-export default function Form({ addMember, memberToEdit }) {
-  console.log(memberToEdit);
+export default function Form({
+  addMember,
+  memberToEdit,
+  setMemberToEdit,
+  editMember
+}) {
   const [newMember, setNewMember] = useState({
     firstName: "",
     lastName: "",
@@ -13,6 +17,7 @@ export default function Form({ addMember, memberToEdit }) {
     role: "",
     isHappy: false
   });
+  console.log(memberToEdit.isEditing);
 
   const inputHandler = event => {
     let value =
@@ -32,7 +37,13 @@ export default function Form({ addMember, memberToEdit }) {
 
   const submitForm = event => {
     event.preventDefault();
-    addMember(newMember);
+    if (memberToEdit.length === undefined) {
+      editMember(newMember);
+    } else {
+      addMember(newMember);
+    }
+
+    // reset the new member object
     setNewMember({
       firstName: "",
       lastName: "",
@@ -41,8 +52,22 @@ export default function Form({ addMember, memberToEdit }) {
       email: "",
       phoneNumber: "",
       role: "",
-      isHappy: false
+      isHappy: false,
+      isEditing: false
     });
+    // reset the member to edit object
+    setMemberToEdit({
+      firstName: "",
+      lastName: "",
+      age: "",
+      gender: "",
+      email: "",
+      phoneNumber: "",
+      role: "",
+      isHappy: false,
+      isEditing: false
+    });
+    // setMemberToEdit([]);
   };
 
   return (

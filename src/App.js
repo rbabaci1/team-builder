@@ -14,16 +14,45 @@ function App() {
       email: "4rabah@gmail.com",
       phoneNumber: "510-646-7743",
       role: "Full-Stack Web Developer",
-      isHappy: true
+      isHappy: true,
+      isEditing: false
     }
   ]);
-  const [memberToEdit, setMemberToEdit] = useState({});
+  const [memberToEdit, setMemberToEdit] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    gender: "",
+    email: "",
+    phoneNumber: "",
+    role: "",
+    isHappy: false,
+    isEditing: false
+  });
+  // console.log(membersList);
+  // const [memberToEdit, setMemberToEdit] = useState([]);
 
   const addMember = member => setMembersList([...membersList, member]);
 
+  const editMember = editedMember => {
+    let memberToEditIndex = membersList.findIndex(member => {
+      return JSON.stringify(member) === JSON.stringify(memberToEdit);
+    });
+
+    if (memberToEditIndex >= 0) {
+      membersList[memberToEditIndex] = editedMember;
+    }
+  };
+  console.log(memberToEdit);
+
   return (
     <div className="App">
-      <Form addMember={addMember} memberToEdit={memberToEdit} />
+      <Form
+        addMember={addMember}
+        memberToEdit={memberToEdit}
+        setMemberToEdit={setMemberToEdit}
+        editMember={editMember}
+      />
 
       <div className="card-wrapper">
         {membersList.map((member, index) => (
