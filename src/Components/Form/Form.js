@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./form.css";
 
-export default function Form({
-  addMember,
-  memberToEdit,
-  setMemberToEdit,
-  editMember
-}) {
+function Form({ addMember, memberToEdit, setMemberToEdit, editMember }) {
   const [newMember, setNewMember] = useState({
     firstName: "",
     lastName: "",
@@ -17,10 +12,8 @@ export default function Form({
     phoneNumber: "",
     role: "",
     isHappy: false,
-    isEditing: false,
-    id: 0
+    isEditing: false
   });
-  const [memberId, setMemberID] = useState(1);
 
   const inputHandler = event => {
     let value =
@@ -31,8 +24,7 @@ export default function Form({
     setNewMember({
       ...newMember,
       [event.target.name]: value,
-      isEditing: true,
-      id: memberId
+      isEditing: true
     });
   };
 
@@ -43,7 +35,7 @@ export default function Form({
   const submitForm = event => {
     event.preventDefault();
     memberToEdit.isEditing ? editMember(newMember) : addMember(newMember);
-    setMemberID(memberId + 1);
+
     // reset the new member object
     setNewMember({
       firstName: "",
@@ -184,3 +176,5 @@ export default function Form({
     </div>
   );
 }
+
+export default Form;

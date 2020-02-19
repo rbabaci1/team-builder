@@ -15,11 +15,10 @@ function App() {
       phoneNumber: "510-646-7743",
       role: "Full-Stack Web Developer",
       isHappy: true,
-      isEditing: true,
-      id: 0
+      isEditing: true
     }
   ]);
-  console.log(membersList);
+
   const [memberToEdit, setMemberToEdit] = useState({
     firstName: "",
     lastName: "",
@@ -31,7 +30,7 @@ function App() {
     isHappy: false,
     isEditing: false
   });
-  console.log(memberToEdit);
+
   const addMember = member => setMembersList([...membersList, member]);
 
   const editMember = editedMember => {
