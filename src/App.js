@@ -14,7 +14,7 @@ function App() {
       email: "4rabah@gmail.com",
       phoneNumber: "510-646-7743",
       role: "Full-Stack Web Developer",
-      isHappy: "Yes"
+      isHappy: true
     }
   ]);
 

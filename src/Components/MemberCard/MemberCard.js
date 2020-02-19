@@ -35,7 +35,7 @@ export default function MemberCard({ member, index }) {
       </p>
 
       <p>
-        <span>Happy with his/her job?</span> {member.isHappy}
+        <span>Happy with his/her job?</span> {member.isHappy ? "Yes" : "No"}
       </p>
     </div>
   );

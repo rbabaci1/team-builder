@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./form.css";
 
 export default function Form({ addMember }) {
@@ -14,9 +14,14 @@ export default function Form({ addMember }) {
   });
 
   const inputHandler = event => {
+    let value =
+      event.target.name !== "isHappy"
+        ? event.target.value
+        : event.target.checked;
+
     setNewMember({
       ...newMember,
-      [event.target.name]: event.target.value
+      [event.target.name]: value
     });
   };
 
@@ -26,6 +31,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="fname">First name: </label>
           <input
+            onChange={inputHandler}
             type="text"
             name="firstName"
             id="fname"
@@ -36,6 +42,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="lname">Last name: </label>
           <input
+            onChange={inputHandler}
             type="text"
             name="lastName"
             id="lname"
@@ -46,6 +53,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="age">Age: </label>
           <input
+            onChange={inputHandler}
             type="number"
             name="age"
             id="age"
@@ -55,7 +63,7 @@ export default function Form({ addMember }) {
 
         <section id="gender-select">
           <label htmlFor="gender">Gender: </label>
-          <select id="gender">
+          <select onChange={inputHandler} id="gender" name="gender">
             <option>Male</option>
             <option>Female</option>
           </select>
@@ -64,6 +72,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="email">Email: </label>
           <input
+            onChange={inputHandler}
             type="email"
             name="email"
             id="email"
@@ -74,6 +83,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="phoneNumber">Phone number: </label>
           <input
+            onChange={inputHandler}
             type="tel"
             name="phoneNumber"
             id="phoneNumber"
@@ -84,6 +94,7 @@ export default function Form({ addMember }) {
         <section>
           <label htmlFor="role">Role: </label>
           <input
+            onChange={inputHandler}
             type="text"
             name="role"
             id="role"
@@ -93,7 +104,12 @@ export default function Form({ addMember }) {
 
         <section id="checkbox">
           <label htmlFor="isHappy">Happy with your job?</label>
-          <input type="checkbox" name="isHappy" id="isHappy" />
+          <input
+            onChange={inputHandler}
+            type="checkbox"
+            name="isHappy"
+            id="isHappy"
+          />
         </section>
       </form>
     </div>
