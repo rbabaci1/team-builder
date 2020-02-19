@@ -1,7 +1,7 @@
 import React from "react";
 import "./memberCard.css";
 
-export default function MemberCard({ member, index }) {
+export default function MemberCard({ member, setMemberToEdit, index }) {
   return (
     <div className="member-card" key={index}>
       <p>

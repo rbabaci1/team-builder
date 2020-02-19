@@ -27,7 +27,12 @@ function App() {
 
       <div className="card-wrapper">
         {membersList.map((member, index) => (
-          <MemberCard member={member} key={index} />
+          <MemberCard
+            member={member}
+            setMemberToEdit={setMemberToEdit}
+            key={index}
+            index={index}
+          />
         ))}
       </div>
     </div>
