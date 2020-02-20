@@ -12,7 +12,7 @@ function App() {
       age: 25,
       gender: "Male",
       email: "4rabah@gmail.com",
-      phoneNumber: "510-646-7743",
+      phoneNumber: "5106467743",
       role: "Full-Stack Web Developer",
       isHappy: true,
       isEditing: true
@@ -34,13 +34,17 @@ function App() {
   const addMember = member => setMembersList([...membersList, member]);
 
   const editMember = editedMember => {
-    let memberToEditIndex = membersList.findIndex(member => {
-      return JSON.stringify(member) === JSON.stringify(memberToEdit);
-    });
+    let memberToEditIndex = membersList.findIndex(
+      member => JSON.stringify(member) === JSON.stringify(memberToEdit)
+    );
 
-    if (memberToEditIndex >= 0) {
-      membersList[memberToEditIndex] = editedMember;
-    }
+    let newMembers = membersList.map((member, index) => {
+      if (index === memberToEditIndex) {
+        return editedMember;
+      }
+      return member;
+    });
+    setMembersList(newMembers);
   };
 
   return (

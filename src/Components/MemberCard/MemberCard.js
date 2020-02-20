@@ -40,7 +40,9 @@ export default function MemberCard({ member, setMemberToEdit, index }) {
       </p>
 
       <div
-        onClick={() => setMemberToEdit({ ...member, isEditing: true })}
+        onClick={() => {
+          setMemberToEdit(member);
+        }}
         className="edit-btn"
       >
         Edit

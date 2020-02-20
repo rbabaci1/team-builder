@@ -11,8 +11,7 @@ function Form({ addMember, memberToEdit, setMemberToEdit, editMember }) {
     email: "",
     phoneNumber: "",
     role: "",
-    isHappy: false,
-    isEditing: false
+    isHappy: false
   });
 
   const inputHandler = event => {
@@ -36,7 +35,7 @@ function Form({ addMember, memberToEdit, setMemberToEdit, editMember }) {
     event.preventDefault();
     memberToEdit.isEditing ? editMember(newMember) : addMember(newMember);
 
-    // reset the new member object
+    // reset newMember object
     setNewMember({
       firstName: "",
       lastName: "",
@@ -45,10 +44,9 @@ function Form({ addMember, memberToEdit, setMemberToEdit, editMember }) {
       email: "",
       phoneNumber: "",
       role: "",
-      isHappy: false,
-      isEditing: false
+      isHappy: false
     });
-    // reset the member to edit object
+    // reset memberToEdit object
     setMemberToEdit({
       firstName: "",
       lastName: "",
