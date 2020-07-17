@@ -1,0 +1,28 @@
+span {
+    font-weight: bold;
+    font-family: "Monaco";
+}
+
+.member-card {
+    padding: 10px 15px;
+    width: 280px;
+    font-size: 17px;
+    background: #d5d7dc;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background: goldenrod;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: rgb(156, 117, 17);
+}
